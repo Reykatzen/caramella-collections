@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Caramella's Collections</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/img/logo.png" alt="Caramella's Collections Logo" height="40" class="d-inline-block align-text-top">
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <!-- Link Ke Favorit -->
+                <a href="favorit.html" class="text-dark"><i class="bi bi-heart fs-4"></i></a>
+                <!-- Link Ke Daftar Belanjaan -->
+                <a href="pesanan.html" class="text-dark position-relative">
+                    <i class="bi bi-bag fs-4"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Frame Foto Produk Detail -->
+            <div class="col-md-5">
+                <div class="border rounded-3 p-2 bg-white">
+                    <img src="assets/img/barang1.png" class="img-fluid rounded-3 w-100" style="max-height: 400px; object-fit: contain;" alt="Detail Baju">
+                </div>
+            </div>
+
+            <!-- Detail Info Produk -->
+            <div class="col-md-7">
+                <h2 class="fw-bold">Blouse Wanita Floral Elegant Style</h2>
+                <div class="text-warning mb-2">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> 
+                    <span class="text-muted ms-2">(4.8 / 5.0 Rating)</span>
+                </div>
+                <h3 class="text-primary fw-bold my-3">IDR 100</h3>
+                <p class="text-muted">Bahan katun rayon premium, sangat adem dan nyaman digunakan sehari-hari maupun acara formal. Potongan fit dan kekinian.</p>
+                
+                <div class="mb-4">
+                    <label class="fw-semibold mb-2">Pilih Ukuran:</label>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-dark btn-sm">S</button>
+                        <button class="btn btn-outline-dark btn-sm active">M</button>
+                        <button class="btn btn-outline-dark btn-sm">L</button>
+                        <button class="btn btn-outline-dark btn-sm">XL</button>
+                    </div>
+                </div>
+
+                <!-- Tombol Beli Langsung Menuju Payment -->
+                <div class="d-flex gap-3">
+                    <a href="payment.html" class="btn btn-primary px-4 py-2 fw-semibold"><i class="bi bi-bag-check me-2"></i>Beli Sekarang</a>
+                    <button class="btn btn-outline-secondary px-4 py-2"><i class="bi bi-cart-plus me-2"></i>Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-5 pb-4 mt-5" style="background-color: var(--primary-color) !important;">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold fs-4">Caramella's Collections</h5>
+                    <p class="small text-white-50">Penyedia pakaian wanita terdepan dengan koleksi berkualitas dan harga terjangkau.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6>Bantuan & Layanan</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Cara Pembelian</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Pengiriman & Pengembalian</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Ikuti Kami</h6>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-light opacity-25 my-4">
+            <p class="text-center small mb-0">&copy; 2026 Caramella's Collections. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Belanja - Caramella's Collections</title>
+    <!-- Plugin Bootstrap Local CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .star-rating i {
+            font-size: 1.8rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .star-rating i.active, .star-rating i:hover {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/img/logo.png" alt="Caramella Logo" height="40">
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="favorit.html" class="text-dark"><i class="bi bi-heart fs-4"></i></a>
+                <a href="pesanan.html" class="text-primary position-relative">
+                    <i class="bi bi-bag-fill fs-4"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5" style="max-width: 850px;">
+        <div class="d-flex align-items-center gap-2 mb-4">
+            <a href="index.html" class="btn btn-outline-secondary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                <i class="bi bi-arrow-left fs-5"></i>
+            </a>
+            <h4 class="fw-bold m-0"><i class="bi bi-bag-check-fill text-primary me-2"></i>Daftar Belanjaan Saya</h4>
+        </div>
+
+        <!-- Tab Flow Status -->
+        <ul class="nav nav-pills nav-justified bg-white p-2 rounded-3 shadow-sm mb-4" id="orderTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-bold" id="proses-tab" data-bs-toggle="tab" data-bs-target="#proses" type="button" role="tab">
+                    <i class="bi bi-clock-history me-1"></i> Dalam Proses
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="pengiriman-tab" data-bs-toggle="tab" data-bs-target="#pengiriman" type="button" role="tab">
+                    <i class="bi bi-truck me-1"></i> Dalam Pengiriman
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="tiba-tab" data-bs-toggle="tab" data-bs-target="#tiba" type="button" role="tab">
+                    <i class="bi bi-box-seam me-1"></i> Pesanan Telah Tiba
+                </button>
+            </li>
+        </ul>
+
+        <!-- Content Tab -->
+        <div class="tab-content" id="orderTabContent">
+
+            <!-- TAB 1: DALAM PROSES -->
+            <div class="tab-pane fade show active" id="proses" role="tabpanel">
+                <div class="alert alert-warning border-0 rounded-3 d-flex align-items-center gap-3 mb-4 shadow-sm" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill fs-2 text-warning"></i>
+                    <div>
+                        <strong>Informasi Verifikasi:</strong><br>
+                        Jika dalam <strong>2 x 24 jam</strong> pesanan Anda belum ditanggapi/diproses, silakan hubungi <a href="https://wa.me/6281234567890" target="_blank" class="fw-bold text-dark text-decoration-underline">Admin Customer Service</a>.
+                    </div>
+                </div>
+
+                <!-- Card Pesanan Dalam Proses -->
+                <div class="card border-0 shadow-sm rounded-3 mb-3">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between border-bottom pb-2 mb-3">
+                            <span class="small text-muted">No. Transaksi: <strong>FADUT-PAY-261024-0003</strong></span>
+                            <span class="badge bg-warning text-dark">Menunggu Verifikasi</span>
+                        </div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="assets/img/barang1.png" alt="Barang" class="rounded-2" style="width: 70px; height: 70px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">Blouse Wanita Floral Elegant Style</h6>
+                                <span class="small text-muted">1x IDR 100</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">Total Biaya: IDR 100</span>
+                            <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-whatsapp me-1"></i> Hubungi Admin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: DALAM PENGIRIMAN -->
+            <div class="tab-pane fade" id="pengiriman" role="tabpanel">
+                <div class="card border-0 shadow-sm rounded-3 mb-3">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between border-bottom pb-2 mb-3">
+                            <span class="small text-muted">No. Transaksi: <strong>FADUT-PAY-251024-0012</strong></span>
+                            <span class="badge bg-info text-dark"><i class="bi bi-truck me-1"></i>Sedang Dikirim</span>
+                        </div>
+                        <div class="d-flex gap-3 align-items-center mb-3">
+                            <img src="assets/img/barang2.png" alt="Barang" class="rounded-2" style="width: 70px; height: 70px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">Gaun Midi Casual Lengan Panjang</h6>
+                                <span class="small text-muted">1x IDR 150</span>
+                            </div>
+                        </div>
+                        <!-- Keterangan Resi -->
+                        <div class="p-3 bg-light rounded-3 border mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <small class="text-muted d-block">Ekspedisi: <strong>J&T Express</strong></small>
+                                    <small class="text-muted d-block">No. Resi: <strong id="resiNumber">JT98231002931</strong></small>
+                                </div>
+                                <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                                    <button class="btn btn-sm btn-outline-secondary" onclick="navigator.clipboard.writeText('JT98231002931'); alert('Nomor resi berhasil disalin!');">
+                                        <i class="bi bi-files me-1"></i>Salin Resi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">Total Biaya: IDR 150</span>
+                            <a href="https://www.jet.co.id/track" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt me-1"></i>Lacak Paket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: TELAH TIBA -->
+            <div class="tab-pane fade" id="tiba" role="tabpanel">
+                <div class="card border-0 shadow-sm rounded-3 mb-3">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between border-bottom pb-2 mb-3">
+                            <span class="small text-muted">No. Transaksi: <strong>FADUT-PAY-241024-0005</strong></span>
+                            <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>Telah Tiba di Alamat</span>
+                        </div>
+                        <div class="d-flex gap-3 align-items-center mb-3">
+                            <img src="assets/img/barang3.png" alt="Barang" class="rounded-2" style="width: 70px; height: 70px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">Kemeja Oversize Cotton Premium</h6>
+                                <span class="small text-muted">1x IDR 120</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                            <span class="fw-bold">Total Biaya: IDR 120</span>
+                            <button class="btn btn-success btn-sm fw-bold" data-bs-toggle="modal" data-bs-target="#finishOrderModal">
+                                <i class="bi bi-check2-square me-1"></i>Selesaikan Pesanan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Konfirmasi Pesanan Selesai & Bintang Ulasan -->
+    <div class="modal fade" id="finishOrderModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-body">
+                    <i class="bi bi-patch-check text-success display-1 mb-2"></i>
+                    <h4 class="fw-bold">Pesanan Selesai</h4>
+                    <p class="text-muted small mb-3">Terima kasih telah berbelanja di Caramella's Collections! Bagaimana kualitas produk yang kamu terima?</p>
+                    
+                    <!-- Bintang Rating -->
+                    <div class="star-rating d-flex justify-content-center gap-2 mb-3">
+                        <i class="bi bi-star-fill" data-value="1"></i>
+                        <i class="bi bi-star-fill" data-value="2"></i>
+                        <i class="bi bi-star-fill" data-value="3"></i>
+                        <i class="bi bi-star-fill" data-value="4"></i>
+                        <i class="bi bi-star-fill" data-value="5"></i>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="3" placeholder="Tuliskan ulasan singkat mengenai produk ini... (Opsional)"></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-light w-50" data-bs-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-success w-50 fw-bold" onclick="alert('Terima kasih atas ulasan dan konfirmasinya!'); location.reload();">Selesaikan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
